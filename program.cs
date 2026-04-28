@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 
 //Create muna ng Properties
@@ -192,8 +192,9 @@ class Program
             {
                 if (cart[i].Product.Id == selected.Id)
                 {
-                    int newQty = cart[i].Quantity + qty;
-                    if (!selected.HasEnoughStock(newQty))
+
+
+                    if (!selected.HasEnoughStock(qty))
                     {
                         PrintError($"Cannot add {qty} more. Only {selected.RemainingStock - cart[i].Quantity} additional units available.");
                         found = true;
@@ -201,6 +202,7 @@ class Program
                         break;
                     }
 
+                    int newQty = cart[i].Quantity + qty;
                     cart[i].Quantity = newQty;
                     cart[i].Subtotal = selected.GetItemTotal(newQty);
                     selected.DeductStock(qty);
@@ -218,11 +220,17 @@ class Program
                 PrintSuccess($"Added to cart: {selected.Name} x{qty}  (Subtotal: PHP {cart[cartCount - 1].Subtotal:F2})");
             }
 
-            // Continue shopping?
-            Console.Write("\n  Add more items? (Y/N): ");
-            string cont = (Console.ReadLine() ?? "").Trim().ToUpper();
+            string cont;
+            while (true)
+            {
+
+                Console.Write("\n  Add more items? (Y/N)");
+                cont = (Console.ReadLine() ?? "").Trim().ToUpper();
+                if (cont == "Y" || cont == "N") break;
+                PrintError("Invalid input. Please enter Y or N.");
+
+            }
             if (cont != "Y") shopping = false;
-        }
 
         // Receipt 
         Console.WriteLine();
@@ -339,4 +347,6 @@ class Program
         Console.ResetColor();
         Console.ReadLine();
     }
+ }
+
 }
