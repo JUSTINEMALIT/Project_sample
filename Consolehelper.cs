@@ -1,7 +1,7 @@
 using System;
 
 
-//consolehelper.cs
+//consolehelper.CS
 
 
 //  para sa lahat ng display and printing methods

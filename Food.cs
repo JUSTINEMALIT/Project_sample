@@ -1,7 +1,7 @@
 using System;
 
 
-//food.cs
+//food.CS
 
 //create ng food constructors
 

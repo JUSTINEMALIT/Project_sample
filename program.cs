@@ -1,6 +1,6 @@
 ﻿using System;
 
-//main
+//main file
 
 class Program
 {
