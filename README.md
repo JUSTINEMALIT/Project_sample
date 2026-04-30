@@ -1,3 +1,7 @@
+
+![image alt](https://github.com/JUSTINEMALIT/Malit_Justine_ShoppingCartActivity/blob/19011e575da3b39d5abfdc90a28f71d2fd6fd829/009426a4-1fc9-4136-b4b2-bef9ac64740e.jpg)
+
+
 # Project_sample
 quiz 1 and 2 
 
