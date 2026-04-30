@@ -24,6 +24,7 @@ features of my shopping cart system part 2
 
 4. Order History Finally, I added an order history feature so users can look back at all completed transactions within the same session. Each completed checkout is saved as an Order object — capturing the receipt number, timestamp, items purchased, totals, payment, and change. Users can also reprint any past receipt by entering its receipt number.
 
+....
 
 
 
